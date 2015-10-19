@@ -17,7 +17,7 @@ defmodule API.Subscriber.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     [applications: [:logger],
-     mod: {API.Subscriber, []}]
+     mod: {Server.API.Subscriber, []}]
   end
 
   # Dependencies can be Hex packages:

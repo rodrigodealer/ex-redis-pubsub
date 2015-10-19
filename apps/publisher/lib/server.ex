@@ -2,5 +2,5 @@ defmodule Server.API do
   use Maru.Router
   plug Plug.Logger
 
-  mount Server.API.Handlers.Publish
+  mount Server.API.Publisher.Handlers.Publish
 end
