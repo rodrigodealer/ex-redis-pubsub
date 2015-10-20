@@ -1,9 +1,9 @@
 use Mix.Config
 
 config :exredis,
-  host: "pub-redis-17076.us-east-1-4.4.ec2.garantiadata.com",
-  port: 17076,
-  password: "TpKFOfaTl53hLw3H",
+  host: System.get_env("REDIS_HOST"),
+  port: String.to_integer(System.get_env("REDIS_PORT")),
+  password: System.get_env("REDIS_PASSWORD"),
   db: 0,
   reconnect: :no_reconnect,
   max_queue: :infinity
