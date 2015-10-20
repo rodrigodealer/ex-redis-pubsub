@@ -1,7 +1,7 @@
 use Mix.Config
 
 config :maru, Server.API,
-  http: [port: 8880]
+  http: [port: System.get_env("PORT")]
 
 config :exredis,
   host: "pub-redis-17076.us-east-1-4.4.ec2.garantiadata.com",
