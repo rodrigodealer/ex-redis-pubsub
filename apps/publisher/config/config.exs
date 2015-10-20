@@ -4,7 +4,7 @@ config :maru, Server.API,
   http: [port: System.get_env("PORT")]
 
 config :exredis,
-  host: "pub-redis-17076.us-east-1-4.4.ec2.garantiadata.com",
+  host: System.get_env("REDIS_HOST"),
   port: 17076,
   password: "TpKFOfaTl53hLw3H",
   db: 0,
