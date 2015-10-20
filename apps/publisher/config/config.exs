@@ -5,7 +5,7 @@ config :maru, Server.API,
 
 config :exredis,
   host: System.get_env("REDIS_HOST"),
-  port: 17076,
+  port: String.to_integer(System.get_env("REDIS_PORT")),
   password: System.get_env("REDIS_PASSWORD"),
   db: 0,
   reconnect: :no_reconnect,
