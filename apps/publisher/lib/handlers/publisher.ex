@@ -9,10 +9,9 @@ defmodule Server.API.Publisher.Handlers.Publish do
   end
 
   post "/publish" do
-    client = Exredis.start
-    client |> Exredis.Api.publish "queue", Poison.encode!(params)
+    Server.API.Publisher.Client.RedisClient.publish(params)
     status 202
-    ["hello"]
+    params
   end
 
 end
